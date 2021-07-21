@@ -7,20 +7,28 @@
 	<title>Memory Game</title>
 </head>
 <body>
-	<div id="overlay">
-		<div id="gameOver">
-			<div id="gameOver-title">Game over</div>
-			<div id="gameOver-time"></div>
-			<button id="retry">Retry</button>
+	</div>
+	<div id="overlay"> <!--overlay: prevents user input, contains timer and game over screen-->
+		<div id="overlay__timeBar"></div>
+		<div id="overlay__gameOver">
+			<div id="overlay__gameOver-title">Game over</div>
+			<div id="overlay__gameOver-time"></div>
+			<button id="overlay__retry">Retry</button>
 		</div>
 	</div>
-	<div id="settings-div">
-		<button id="3pairs">3pairs</button>
-		<button id="6pairs">6pairs</button>
-		<button id="12pairs">12pairs</button>
+	<div id="settings-div"><!--settings-div: contains the buttons to select amount of figures pairs and themes-->
+		<div id="settings-pairs">
+			<button id="3pairs">3 pairs</button>
+			<button id="6pairs">6 pairs</button>
+			<button id="12pairs">12 pairs</button>
+		</div>
+		<div id="settings-themes">
+			<button id="carsTheme">Cars</button>
+			<button id="landscapesTheme">Landscapes</button>
+			<button id="musicTheme">Music</button>
+		</div>	
 	</div>
-	<div id="grid-container">
-		
+	<div id="grid-container"><!--grid-container: is where the figures are displayed.Empty by default, grid items added in script-->
 	</div>
 	<script type="text/javascript" src="code.js"></script>
 </body>

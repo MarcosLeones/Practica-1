@@ -1,22 +1,106 @@
+/*sections: 
+-BODY
+
+-STETTINGS DIV
+--SETTINGS PAIRS
+--STINGS THEMES
+---BUTTONS
+
+-GRID
+--GRID ITEMS
+---IMAGES
+
+-OVERLAY
+--TIMEBAR
+--GAME OVER SCREEN
+*/
+
+
+/*BODY*/
+body{
+	font-family: sans-serif;
+}
+
+
+/*SETTINGS DIV*/
+#settings-div{
+	background-color: #ff3;
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*SETTINGS PAIRS*/
+	#settings-pairs{
+		align-self: center;
+		margin-left: 3vw;
+	}
+
+/*SETTINGS THEMES*/
+	#settings-themes{
+		align-self: center;
+		margin-right: 3vw;
+	}
+
+/*SETTINGS BUTTONS*/
+		#settings-div button{
+			margin-left: 4px;
+			margin-right: 4px;
+			padding: 4px;
+		}
+
+
+/*GRID*/
 #grid-container{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	height: 100vh;
+	height: 90vh;
 	width: 100vw;
 	background-color: #aaa;
 	padding: 10px;
 }
 
-.grid-item{
-	margin: 5px;
-	background-image: url(images/cars/texture.png);
-	border: 5px solid #444;
-}
+/*GRID ITEMS*/
+	.grid-item-cars{
+		margin: 5px;
+		background-image: url(images/cars/texture.png);
+		border: 5px solid #444;
+	}
 
-.grid-item:hover{
-	border: 5px solid #ff3;
-}
+	.grid-item-cars:hover{
+		border: 5px solid #ff3;
+	}
 
+	.grid-item-landscapes{
+		margin: 5px;
+		background-image: url(images/landscapes/texture.png);
+		border: 5px solid #705820;
+	}
+
+	.grid-item-landscapes:hover{
+		border: 5px solid #9b00ff;
+	}
+
+	.grid-item-music{
+		margin: 5px;
+		background-image: url(images/music/texture.png);
+		border: 5px solid #ff7c00;
+	}
+
+	.grid-item-music:hover{
+		border: 5px solid #00e3ff;
+	}
+
+/*IMAGES*/
+		.imgGI{
+			display: none;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+
+
+/*OVERLAY*/
 #overlay{
 	position: absolute;
 	z-index: 99999;
@@ -25,22 +109,52 @@
 	width: 100vw;
 	display: none;
 }
+/*TIMEBAR*/
+	#overlay__timeBar{
+		display: none;
+		background-color: #f22;
+		width: 100vw;
+		height: 4vh;
+		margin-top: 8vh;
+		animation-name: timeBarAnimation;
+		/*animation-duration: 1.5s;*/
+		animation-timing-function: linear;
+	}
+	@keyframes timeBarAnimation{
+		from{
+			width: 100vw;
+		}
+		to{
+			width: 1vw;
+		}
+	}
 
-#gameOver{
-	display: none;
-	height: 200px;
-	background-color: red;
-	font-size: 40px;
-}
 
-#gameOver-title{
-	display: inline-block;
-}
+/*GAME OVER SCREEN*/
+	#overlay__gameOver{
+		margin-top: 30vh;
+		display: none;
+		height: 40vh;
+		background-color: #222;
+		color: #fff;
+		font-size: 10vh;
+		text-align: center;
+	}
 
-#gameOver-time{
-	display: inline-block;
-}
+		#overlay__gameOver-title{
 
-#retry{
-	display: inline-block;
-}
+			
+		}
+
+		#overlay__gameOver-time{
+
+		}
+
+		#overlay__retry{
+			font-size: 7vh;
+			padding: 5px 10px;
+		}
+
+
+
+
