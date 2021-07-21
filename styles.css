@@ -1,0 +1,46 @@
+#grid-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	height: 100vh;
+	width: 100vw;
+	background-color: #aaa;
+	padding: 10px;
+}
+
+.grid-item{
+	margin: 5px;
+	background-image: url(images/cars/texture.png);
+	border: 5px solid #444;
+}
+
+.grid-item:hover{
+	border: 5px solid #ff3;
+}
+
+#overlay{
+	position: absolute;
+	z-index: 99999;
+	background-color: transparent;
+	height: 100vh;
+	width: 100vw;
+	display: none;
+}
+
+#gameOver{
+	display: none;
+	height: 200px;
+	background-color: red;
+	font-size: 40px;
+}
+
+#gameOver-title{
+	display: inline-block;
+}
+
+#gameOver-time{
+	display: inline-block;
+}
+
+#retry{
+	display: inline-block;
+}
